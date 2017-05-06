@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>打地鼠</title>
+
+<script language="javascript">
+var yuema=0 //全局变量 决定是否开始
+var jieguo=0 //分数
+var fleeflee=0//逃跑个数
+var i=60 //计时器
+t=window.setInterval('ji()',1000);
+var fir 
+fir=window.setInterval('chuxian()',500); //chuxian调试中
+
+var shuzushiwo=new Array(24)
+
+//格式化
+function jizhong(zheshigeshuzi) //点击格子 发生响应
+{  
+if (yuema==1)
+{ 
+var shiwo   //显示分数的线框,有些东西还是放里面好……
+shiwo=document.getElementById("xianshijieguo")
+var zhendenum
+var yansi
+yansi="yanshi("
+zhendenum=parseInt(zheshigeshuzi)
+
+if  (shuzushiwo[zhendenum]>0)  //击中的确实是地鼠
+{ //先不要变
+	 
+	  shuzushiwo[zhendenum]=-1  //残留状态
+redraw(zhendenum)
+jieguo=jieguo+1
+  shiwo.innerHTML="打中数目："+jieguo
+  yansi+=zheshigeshuzi
+  yansi+=")"
+
+ var yanshiximie=window.setTimeout(yansi,500) //设置延时 激发消去残留
+	}
+
+	}
+	}
+//点击到正确的格子发生变化
+function yanshi(nnuumm) {
+	
+	var test1
+		//确实在工作
+	test1=Number(nnuumm)
+	shuzushiwo[test1]=0 //恢复原色
+	redraw(test1)
+}
+	
+	
+	function redraw(nnuumm) { //重绘	 输入数字序列号即可
+		var addtext //总文本
+	    var mintext //副文本
+	    var val
+	    var te1
+		var te2 
+		var nop
+		var tyt
+		tyt=parseInt(nnuumm/5)
+	switch (tyt)
+	{ case 0 : te1=1 ;
+	break; 
+	case 1: te1=2;
+	break;
+	case 2:te1=3 ;
+	break;
+	case 3 :te1=4 ;
+	break;
+	case 4 : te1=5
+	break;
+		}
+		te2=1 ;// 序列号
+		mintext="";
+	    addtext="";
+		for ( te2 ; te2<6 ; te2++) {
+	
+	
+	mintext+=" <td  width='70' height='70' onselectstart= 'return false;'  id='d"
+	mintext+=te1
+	mintext+=te2
+	mintext+="'"
+	mintext+=" onclick='jizhong("
+	val=(te1-1)*5+te2-1
+	mintext+=val
+	mintext+=")'"
+	
+	 if (shuzushiwo[val]==-1) {
+		mintext+=" bgcolor='#FF0033'"
+		}	
+     if (shuzushiwo[val]==-2) {
+		 mintext+=" bgcolor='#CCFFFF'"
+	 }
+	mintext+="> "
+	if (shuzushiwo[val]>0) {
+	mintext+="<img src='image/50.PNG' width='69' height='69' /> </td>"
+	}
+     else
+	 {mintext+="&nbsp;</td>"
+		 }
+		      //alert(mintext)                          
+			  }
+    addtext="d"
+	addtext+=te1
+	addtext+=5
+	nop=document.getElementById(addtext)
+	nop.parentNode.innerHTML=mintext 
+		
+		}
+	
+
+
+
+
+function ji() //计时器函数
+{ 
+if (yuema==1)
+{
+var bbb 
+
+i=i-1 ;
+bbb=document.getElementById("hhh")
+bbb.innerHTML="时间："+i
+if (i==0 ) {
+	
+alert("游戏结束了"+"-------------你一共打中了"+jieguo+"只地鼠"+"----------------逃走了"+fleeflee+"只地鼠")
+yuema=0
+jieguo=0
+fleeflee=0
+i=60
+}
+
+}
+
+}
+function chuxian() { //处理地鼠的跳出和收回
+	var iopiop
+	var hh
+	var zhancun
+	var randomi
+	var xitong
+ if (yuema==1)
+	{ 
+	iopiop=0
+	
+	for ( iopiop ; iopiop<2 ; iopiop++ ) //一次跳出几次地鼠
+	{hh=Math.floor(Math.random()*45);
+	if (hh<25 ) {
+	if (shuzushiwo[hh]==0)
+	{ shuzushiwo[hh]=1
+	
+	}
+		
+		
+		
+	
+	 }   //尝试做出改变
+	}  //一下跳三只地鼠
+	//分割线-------------------------------------
+	iopiop=0
+	xitong=document.getElementById("flee")
+	for (iopiop ; iopiop<25 ;iopiop++ ) //消去
+	{   randomi=Math.random()
+		zhancun=shuzushiwo[iopiop]
+		switch  (zhancun)
+		{
+		case -2:
+		 shuzushiwo[iopiop]=0
+		break;
+		case 1:	
+			shuzushiwo[iopiop]=2
+		break;
+		case 2:
+		if (randomi>0.9) 
+		{ shuzushiwo[iopiop]=-2
+		fleeflee=fleeflee+1
+				 
+		xitong.innerHTML="逃跑数目："+fleeflee
+				} 
+		else
+		{shuzushiwo[iopiop]=3
+			}	
+		break;
+		case 3:
+		if (randomi>0.8) 
+		{ shuzushiwo[iopiop]=-2
+		fleeflee=fleeflee+1
+		
+			xitong.innerHTML="逃跑数目："+fleeflee
+			} 
+		else
+		{shuzushiwo[iopiop]=4
+				}
+		break;
+		case 4:
+		if (randomi>0.7)
+		{ shuzushiwo[iopiop]=-2
+		fleeflee=fleeflee+1
+		
+		 xitong.innerHTML="逃跑数目："+fleeflee
+		}
+		else
+		{shuzushiwo[iopiop]=5
+				}
+		break;
+		case 5:
+		if (randomi>0.5)
+		{ shuzushiwo[iopiop]=-2
+		fleeflee=fleeflee+1
+		
+		xitong.innerHTML="逃跑数目："+fleeflee
+					}
+		else
+		{shuzushiwo[iopiop]=6
+			}
+		break;
+		case 6:
+		shuzushiwo[iopiop]=-2
+		fleeflee=fleeflee+1
+		
+		 xitong.innerHTML="逃跑数目："+fleeflee
+		break;}
+		//var tiaoshii
+	//tiaoshii=document.getElementById("tiaoshi1")
+	//tiaoshii.innerHTML=iopiop+" "+shuzushiwo[iopiop]  //调试函数 //
+	//alert("stop")
+		
+		}
+	redraw(0)
+	redraw(5)
+	redraw(10)
+	redraw(15)
+	redraw(20)
+}
+	}
+function startt()
+{ if (yuema==0){  var t1
+var t2
+var t3
+
+t1=document.getElementById("hhh")
+t2=document.getElementById("xianshijieguo")
+t3=document.getElementById("flee")
+	t1.innerHTML="时间：60"
+	t2.innerHTML="打中数目：0 "
+	t3.innerHTML="逃跑数目：0 "
+	yuema=1
+	var iop
+iop=0
+
+for ( iop ; iop<25 ; iop++)
+{
+	shuzushiwo[iop]=0  
+ 
+  } 
+	redraw(0)
+	redraw(5)
+	redraw(10)
+	redraw(15)
+	redraw(20)
+}}
+
+
+</script>
+<style type="text/css">
+.New {
+	font-family: 华文隶书;
+	font-size: 24pt;
+	color: #0CF;
+	background-color: #FF9;
+}
+.dishu {
+	font-size: 18pt;
+	color: #906;
+	font-family: 幼圆;
+}
+body {
+	background-image: url(image/15.JPG);
+}
+</style></head>
+
+<body>
+<p class="New">打地鼠迷你小游戏</p>
+<table width="80%" border="0">
+  <tr>
+    <td width="70" height="70" bgcolor="#FF0033">&nbsp;</td>
+    <td width="100" class="dishu">打中地鼠</td>
+    <td width="70" bgcolor="#CCFFFF">&nbsp;</td>
+    <td width="100" class="dishu">地鼠逃跑</td>
+  </tr>
+</table>
+<p>
+  <input type=button id="hj" value="开始游戏" onclick="startt()" />
+</p>
+<p id="hhh">时间：60</p>
+<p id="xianshijieguo"> 打中数目：0 </p>
+<p id="flee"  >逃跑数目：0</p>
+<table width="80%" border="0">
+</table>
+<table width="80%" border="0">
+  <tr>
+    <td  width="70" height="70"id="d11" onselectstart= "return false;" onclick="jizhong(0)" >&nbsp;</td>
+    <td width="70" id="d12" onclick="jizhong(1)">&nbsp;</td>
+    <td width="70" id="d13" onclick="jizhong(2)">&nbsp;</td>
+    <td width="70" id="d14" onclick="jizhong(3)">&nbsp;</td>
+    <td width="70" id="d15" onclick="jizhong(4)">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="70" height="70"  id="d21" onclick="jizhong(5)">&nbsp;</td>
+    <td width="70" id="d22" onclick="jizhong(6)">&nbsp;</td>
+    <td width="70" id="d23" onclick="jizhong(7)">&nbsp;</td>
+    <td width="70" id="d24" onclick="jizhong(8)">&nbsp;</td>
+    <td width="70" id="d25" onclick="jizhong(9)">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="70" height="70" id="d31" onclick="jizhong(10)">&nbsp;</td>
+    <td width="70" id="d32" onclick="jizhong(11)">&nbsp;</td>
+    <td width="70" id="d33" onclick="jizhong(12)">&nbsp;</td>
+    <td width="70" id="d34" onclick="jizhong(13)">&nbsp;</td>
+    <td width="70" id="d35" onclick="jizhong(14)">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="70" height="70" class="dishu" id="d41" onclick="jizhong(15)">&nbsp;</td>
+    <td width="70" id="d42" onclick="jizhong(16)">&nbsp;</td>
+    <td width="70" id="d43" onclick="jizhong(17)">&nbsp;</td>
+    <td width="70" id="d44" onclick="jizhong(18)">&nbsp;</td>
+    <td width="70" id="d45" onclick="jizhong(19)">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="70" height="70" id="d51" onclick="jizhong(20)">&nbsp;</td>
+    <td width="70" id="d52" onclick="jizhong(21)">&nbsp;</td>
+    <td width="70"  id="d53" onclick="jizhong(22)">&nbsp;</td>
+    <td width="70"  id="d54" onclick="jizhong(23)">&nbsp;</td>
+    <td width="70" id="d55"  onclick="jizhong(24)">&nbsp;</td>
+  </tr>
+</table>
+
+
+</body>
+</html>

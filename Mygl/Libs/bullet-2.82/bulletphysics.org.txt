@@ -1,0 +1,5 @@
+http://bulletphysics.org/wordpress/
+
+Bullet is a Collision Detection and Rigid Body Dynamics Library. The Library is Open Source and free for commercial use, under the ZLib license ( http://opensource.org/licenses/zlib-license.php ).
+
+The main documentation is Bullet_User_Manual.pdf, included in the source code distribution. There is the Physics Forum for feedback and general Collision Detection and Physics discussions. Please visit http://www.bulletphysics.org

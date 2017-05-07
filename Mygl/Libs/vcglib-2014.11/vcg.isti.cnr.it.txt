@@ -1,0 +1,19 @@
+http://vcg.isti.cnr.it/~cignoni/newvcglib/html/
+
+The Visualization and Computer Graphics Library (VCG for short) is a open source portable C++ templated library for manipulation, processing and displaying with OpenGL of triangle and tetrahedral meshes.
+
+The library, composed by more than 100k lines of code, is released under the GPL license, and it is the base of most of the software tools of the Visual Computing Lab of the Italian National Research Council Institute ISTI (http://vcg.isti.cnr.it), like metro and MeshLab.
+
+The VCG library is tailored to mostly manage triangular meshes: The library is fairly large and offers many state of the art functionalities for processing meshes, like:
+
+high quality quadric-error edge-collapse based simplfication,
+efficient spatial query structures (uniform grids, hashed grids, kdtree, ...) ,
+advanced smoothing and fairing algorithms,
+computation of curvature,
+optimization of texture coordinates,
+Hausdorff distance computation,
+Geodesic paths,
+mesh repairing capabilities,
+isosurface extraction and advancing front meshing algorithms,
+Poisson Disk sampling and other tools to sample point distributions over meshes,
+subdivision surfaces,

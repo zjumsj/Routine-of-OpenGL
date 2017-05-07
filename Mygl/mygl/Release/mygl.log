@@ -1,0 +1,75 @@
+﻿  main.cpp
+c:\users\yyf\desktop\gnu_wan\mygl\vector3d.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+main.cpp(19): warning C4305: “初始化”: 从“double”到“float”截断
+main.cpp(93): warning C4474: fscanf_s: 格式字符串中传递的参数太多
+  main.cpp(93): note: 占位符和其参数预计 3 可变参数，但提供的却是 4 参数
+main.cpp(99): warning C4474: fscanf_s: 格式字符串中传递的参数太多
+  main.cpp(99): note: 占位符和其参数预计 2 可变参数，但提供的却是 3 参数
+main.cpp(106): warning C4474: fscanf_s: 格式字符串中传递的参数太多
+  main.cpp(106): note: 占位符和其参数预计 3 可变参数，但提供的却是 4 参数
+main.cpp(113): warning C4474: fscanf_s: 格式字符串中传递的参数太多
+  main.cpp(113): note: 占位符和其参数预计 6 可变参数，但提供的却是 7 参数
+main.cpp(112): warning C4101: “uvIndex”: 未引用的局部变量
+main.cpp(600): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(603): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(615): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(671): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(681): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(692): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(719): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(729): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(740): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(761): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(771): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(782): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(822): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(853): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(879): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(911): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(942): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(968): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1000): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1035): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1039): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1041): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1048): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1053): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1057): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1060): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1062): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1069): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1073): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1077): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1081): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1083): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1090): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1095): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1099): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1103): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1105): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1112): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1117): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1121): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1125): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1127): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1134): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1139): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1141): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1145): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1147): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1154): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1159): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1163): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1167): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1169): warning C4018: “<”: 有符号/无符号不匹配
+main.cpp(1176): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1181): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1416): warning C4305: “参数”: 从“double”到“GLfloat”截断
+main.cpp(1417): warning C4305: “参数”: 从“double”到“GLfloat”截断
+  正在生成代码
+  953 of 1092 functions (87.3%) were compiled, the rest were copied from previous compilation.
+    114 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  mygl.vcxproj -> C:\Users\YYF\Desktop\GNU_wan\Bin\Release\GNU.exe
+  mygl.vcxproj -> C:\Users\YYF\Desktop\GNU_wan\Bin\Release\GNU.pdb (Full PDB)

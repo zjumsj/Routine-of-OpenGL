@@ -1,0 +1,15 @@
+http://www.freetype.org/
+
+
+FreeType is a freely available software library to render fonts.
+
+It is written in C, designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output (glyph images) of most vector and bitmap font formats.
+
+Some products that use FreeType for rendering fonts on screen or on paper, either exclusively or partially:
+
+GNU/Linux and other free Unix operating system derivates like FreeBSD or NetBSD
+iOS, Apple's mobile operating system for iPhones and iPads
+Android, Google's operating system for smartphones and tablet computers
+ChromeOS, Google's operating system for laptop computers
+Ghostscript, a PostScript interpreter used in many printers
+Counting the above products only, you get more than a billion devices that contain FreeType.
